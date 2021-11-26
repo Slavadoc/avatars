@@ -7,14 +7,14 @@ H1 {
 .over {
     position: center;
     z-index:100;
-    width:200px;
+    width:100px;
     grid-area: over;
     justify-self: center;
     align-self: center;
 }
 
 .under {
-    width: 400px;
+    width: 200px;
     z-index:99;
     grid-area: under;
     justify-self: center;
