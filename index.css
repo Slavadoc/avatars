@@ -1,0 +1,38 @@
+H1 {
+  color: #000080;
+  font-size: 200%;
+  font-family: Arial, Verdana, sans-serif;
+  text-align: center;
+}
+.over {
+    position: center;
+    z-index:100;
+    width:200px;
+    grid-area: over;
+    justify-self: center;
+    align-self: center;
+}
+
+.under {
+    width: 400px;
+    z-index:99;
+    grid-area: under;
+    justify-self: center;
+    align-self: center;
+}
+
+.button {
+    grid-area: button;
+    width: 100px;
+    height: 50px;
+    justify-self: center;
+    align-self: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "under over"
+  "button button";
+}
