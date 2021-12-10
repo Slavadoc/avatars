@@ -4,25 +4,20 @@ H1 {
   font-family: Arial, Verdana, sans-serif;
   text-align: center;
 }
-.over {
-    position: center;
-    z-index:100;
-    width:100px;
-    grid-area: over;
+.canvas {
+  grid-area: canvas;
+  justify-self: center;
+  align-self: center;
+}
+.buttonCircle {
+    grid-area: buttonCircle;
+    width: 100px;
+    height: 50px;
     justify-self: center;
     align-self: center;
 }
-
-.under {
-    width: 200px;
-    z-index:99;
-    grid-area: under;
-    justify-self: center;
-    align-self: center;
-}
-
-.button {
-    grid-area: button;
+.buttonTriangle {
+    grid-area: buttonTriangle;
     width: 100px;
     height: 50px;
     justify-self: center;
@@ -33,6 +28,6 @@ H1 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-  "under over"
-  "button button";
+  "canvas canvas"
+  "buttonCircle buttonTriangle";
 }

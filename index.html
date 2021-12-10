@@ -11,11 +11,10 @@
       <h1>Вывод аватарки</h1>
     </header>
     <div class="wrapper">
-     <canvas id="graph" width="300" height="300"></canvas>
+     <canvas class="canvas" id="graph" width="300" height="300"></canvas>
       <script>
         let canvas = document.getElementById('graph')
         let ctx = canvas.getContext('2d')
-        //console.log(ctx);
         ctx.beginPath()
         ctx.moveTo(50, 50)
         ctx.lineTo(250, 50)
@@ -28,13 +27,8 @@
         ctx.fillStyle = '#1a2edb'
         ctx.fill()
         ctx.stroke()
-      </script>
-     <script>
-       let changeImg = () => {
-         console.log('start')
-         let cnv = document.getElementById('graph')
-         console.log(cnv)
-         let ct = cnv.getContext('2d')
+       let aCircle = () => {
+         let ct = canvas.getContext('2d')
          ct.beginPath()
          ct.arc(150, 150, 50, 0, 2 * Math.PI)
          ct.strokeStyle = '#A60000'
@@ -42,8 +36,21 @@
          ct.fill()
          ct.stroke()
        }
+       let aTriangle = () => {
+         let ctc = canvas.getContext('2d')
+         ctc.beginPath()
+         ctc.lineTo(150, 100)
+         ctc.lineTo(200, 200)
+         ctc.lineTo(100, 200)
+         ctc.lineTo(150, 100)
+         ctc.strokeStyle = '#A60000'
+         ctc.fillStyle = '#A60000'
+         ctc.fill()
+         ctc.stroke()
+       }
      </script>
-    <button class="button" id="button" onclick="changeImg()">add img</button>
+     <button class="buttonCircle" id="buttonCircle" onclick="aCircle()">добавить круг</button>
+     <button class="buttonTriangle" id="buttonTriangle" onClick="aTriangle()">добавить триугольник</button>
     </div>
   </body>
 </html>
