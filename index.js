@@ -1,4 +1,4 @@
-/*let button = document.querySelector('btn'); - doesn't work 
+/*let button = document.querySelector('btn'); - doesn't work
 
 console.log(button);
 /*button.onclick = () =>  {
