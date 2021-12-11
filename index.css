@@ -12,7 +12,7 @@ H1 {
 .buttonCircle {
     grid-area: buttonCircle;
     width: 100px;
-    height: 50px;
+    height: 100px;
     justify-self: center;
     align-self: center;
 }
