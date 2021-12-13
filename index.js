@@ -1,18 +1,31 @@
-/*let button = document.querySelector('btn'); - doesn't work 
 
-console.log(button);
-/*button.onclick = () =>  {
-   console.log("it's work");
-   alert("Javascript подключен");
-}
-
-/*const btn = document.querySelector('button');
-
-function random(number) {
-  return Math.floor(Math.random() * (number+1));
-}
-
-btn.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-  document.body.style.backgroundColor = rndCol;
-}*/
+ let aCircle = () => {
+   let ct = canvas.getContext('2d')
+   ct.beginPath()
+   ct.arc(150, 150, 100, 0, 2 * Math.PI)
+   ct.strokeStyle = '#FF9F40'
+   ct.fillStyle = '#FF9F40'
+   ct.fill()
+   ct.stroke()
+ }
+ let aTriangle = () => {
+   let ctc = canvas.getContext('2d')
+   ctc.beginPath()
+   ctc.lineTo(150, 150)
+   ctc.lineTo(200, 200)
+   ctc.lineTo(100, 200)
+   ctc.lineTo(150, 10)
+   ctc.closePath()
+   ctc.strokeStyle = '#6949D7'
+   ctc.fillStyle = '#6949D7	'
+   ctc.fill()
+   ctc.stroke()
+ }
+ let aSmile = () => {
+   alert('worked')
+   let cts = canvas.getContext('2b')
+   cts.lineWidth = 5; // толщина линии
+   cts.strokeStyle = '#151619'
+   cts.arc(75,75,35,0,Math.PI,false);
+   ctx.stroke();
+ }

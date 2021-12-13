@@ -4,6 +4,24 @@ H1 {
   font-family: Arial, Verdana, sans-serif;
   text-align: center;
 }
+.buttons {
+  gtid-area: buttons;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "faceContainer"
+  "noseContainer"
+  "smileContainer";
+}
+.faceContainer {
+  grid-area: faceContainer;
+}
+.noseContainer {
+  grid-area: noseContainer;
+}
+.smileContainer {
+  grid-area: smileContainer;
+}
 .canvas {
   grid-area: canvas;
   justify-self: center;
@@ -19,15 +37,15 @@ H1 {
 .buttonTriangle {
     grid-area: buttonTriangle;
     width: 100px;
-    height: 50px;
+    height: 100px;
     justify-self: center;
     align-self: center;
 }
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
   grid-template-areas:
-  "canvas canvas"
-  "buttonCircle buttonTriangle";
+  "canvas buttons"
+  /* "buttonCircle buttonTriangle"; */
 }
