@@ -7,11 +7,12 @@ H1 {
 .buttons {
   gtid-area: buttons;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
-  "faceContainer"
-  "noseContainer"
-  "smileContainer";
+  "faceContainer eyesContainer"
+  "noseContainer noseContainer"
+  "smileContainer smileContainer";
 }
 .faceContainer {
   grid-area: faceContainer;
@@ -21,6 +22,9 @@ H1 {
 }
 .smileContainer {
   grid-area: smileContainer;
+}
+.eyesContainer {
+  grid-area: eyesContainer;
 }
 .canvas {
   grid-area: canvas;
@@ -33,6 +37,13 @@ H1 {
     height: 100px;
     justify-self: center;
     align-self: center;
+}
+.buttonEyes {
+  grid-area: buttonEyes;
+  width: 200px;
+  height: 100px;
+  justify-self: center;
+  align-self: center;
 }
 .buttonTriangle {
     grid-area: buttonTriangle;

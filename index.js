@@ -34,3 +34,25 @@
    cts.strokeStyle = '#6949D7'
    ctx.stroke()
  }
+ let rightEye = () => {
+   let cter = canvas.getContext('2d')
+   cter.beginPath()
+   cter.arc(100,100,5,0,Math.PI*2,true);  // Левый глаз
+   cter.strokeStyle = '#6949D7'
+   cter.fillStyle = '#6949D7'
+   cter.fill()
+   cter.stroke()
+ }
+ let leftEye = () => {
+   let cte = canvas.getContext('2d')
+   cte.beginPath();
+   cte.arc(200,100,5,0,Math.PI*2,true);  // Правый глаз
+   cte.strokeStyle = '#6949D7'
+   cte.fillStyle = '#6949D7'
+   cte.fill()
+   cte.stroke();
+ }
+ let aEyes = () => {
+   rightEye()
+   leftEye()
+ }

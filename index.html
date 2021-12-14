@@ -25,6 +25,10 @@
          <h3>Smile</h3>
          <img src="smile.svg" class="buttonTriangle" id="buttonTriangle" onclick="aSmile()"></img>
        </div>
+       <div class="eyesContainer" >
+         <h3>Eyes</h3>
+         <img src="eyes.svg" class="buttonEyes" id="buttonEyes" onclick="aEyes()"/>
+       </div>
      </div>
      <script>
        let canvas = document.getElementById('graph')
@@ -36,8 +40,6 @@
        ctx.lineTo(0, 300)
        ctx.lineTo(0, 0)
        ctx.closePath()
-       ctx.strokeStyle = '#6949D7	w'
-       ctx.lineWidth = '5'
        ctx.fillStyle = '#6949D7	'
        ctx.fill()
        ctx.stroke()
