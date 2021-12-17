@@ -1,7 +1,16 @@
 
-// let getCtc = () => {
-//   let ct = canvas.getContext('2d')
-// }
+let canvas = document.getElementById('graph');
+let ctx = canvas.getContext('2d')
+ctx.beginPath()
+ctx.moveTo(0, 0)
+ctx.lineTo(300, 0)
+ctx.lineTo(300, 300)
+ctx.lineTo(0, 300)
+ctx.lineTo(0, 0)
+ctx.closePath()
+ctx.fillStyle = '#6949D7	'
+ctx.fill()
+ctx.stroke()
 
  let aCircle = () => {
    // getCtc()
@@ -55,4 +64,34 @@
  let aEyes = () => {
    rightEye()
    leftEye()
+ }
+ let aChangeArea = (name) => {
+     if(name == 'eyes') {
+       let changeArea = document.getElementById('changeArea')
+       let buttonEyes = document.getElementById('buttonEyes')
+       const clone = buttonEyes.cloneNode(true);
+       while (changeArea.firstChild)changeArea.firstChild.remove();
+       changeArea.replaceWith(clone);
+     }
+     if(name == 'smile') {
+       let changeArea = document.getElementById('changeArea')
+       let buttonSmile = document.getElementById('buttonSmile')
+       const clone = buttonSmile.cloneNode(true);
+       while (changeArea.firstChild) changeArea.firstChild.remove();
+       changeArea.replaceWith(clone);
+     }
+     if(name == 'nose') {
+       let changeArea = document.getElementById('changeArea')
+       let buttonNose = document.getElementById('buttonNose')
+       const clone = buttonSmile.cloneNode(true);
+       while (changeArea.firstChild) changeArea.firstChild.remove();
+       changeArea.replaceWith(clone);
+     }
+     if(name == 'face') {
+       let changeArea = document.getElementById('changeArea')
+       let buttonFace = document.getElementById('buttonFace')
+       const clone = buttonSmile.cloneNode(true);
+       while (changeArea.firstChild) changeArea.firstChild.remove();
+       changeArea.replaceWith(clone);
+     }
  }

@@ -3,47 +3,31 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
     <title>Avatar</title>
   </head>
   <body>
     <header>
       <h1>Вывод аватарки</h1>
     </header>
+    <div id="elem">
+    </div>
     <div class="wrapper">
      <canvas class="canvas" id="graph" width="300" height="300"></canvas>
      <div class="buttons">
-       <div class="faceContainer">
-         <h3>Face</h3>
-         <img src="red.svg" class="buttonCircle" id="buttonCircle" onClick="aCircle()"></img>
-       </div>
-       <div class="noseContainer">
-         <h3>Nose</h3>
-         <img src="triangle.svg" class="buttonTriangle" id="buttonTriangle" onclick="aTriangle()"></img>
-       </div>
-       <div class="smileContainer">
-         <h3>Smile</h3>
-         <img src="smile.svg" class="buttonTriangle" id="buttonTriangle" onclick="aSmile()"></img>
-       </div>
-       <div class="eyesContainer" >
-         <h3>Eyes</h3>
-         <img src="eyes.svg" class="buttonEyes" id="buttonEyes" onclick="aEyes()"/>
+       <button class="face" onclick="aChangeArea('face')">face</button>
+       <button class="nose" onclick="aChangeArea('nose')">nose</button>
+       <button class="smile" id="smile" onclick="aChangeArea('smile')">smile</button>
+       <button class="eyes" id="eyes" onclick="aChangeArea('eyes')">eyes</button>
+       <div class="changeArea" id="changeArea">ChangeArea</div>
+     </div>
+     <div>
+         <img src="img/smile.svg" class="buttonTriangle" id="buttonSmile" onclick="aSmile()"></img>
+         <img src="img/nose.svg" class="buttonTriangle" id="buttonTriangle" onclick="aTriangle()"></img>
+         <img src="img/face.svg" class="buttonCircle" id="buttonFace" onClick="aCircle()"></img>
+         <img src="img/eyes.svg" class="buttonEyes" id="buttonEyes" onclick="aEyes()"/>
        </div>
      </div>
-     <script>
-       let canvas = document.getElementById('graph')
-       let ctx = canvas.getContext('2d')
-       ctx.beginPath()
-       ctx.moveTo(0, 0)
-       ctx.lineTo(300, 0)
-       ctx.lineTo(300, 300)
-       ctx.lineTo(0, 300)
-       ctx.lineTo(0, 0)
-       ctx.closePath()
-       ctx.fillStyle = '#6949D7	'
-       ctx.fill()
-       ctx.stroke()
-    </script>
+    <script src="index.js"></script>
     </div>
   </body>
 </html>

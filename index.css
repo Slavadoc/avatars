@@ -7,24 +7,27 @@ H1 {
 .buttons {
   gtid-area: buttons;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-  "faceContainer eyesContainer"
-  "noseContainer noseContainer"
-  "smileContainer smileContainer";
+  "face eyes nose smile"
+  "changeArea changeArea changeArea changeArea"
+  "changeArea changeArea changeArea changeArea";
 }
-.faceContainer {
-  grid-area: faceContainer;
+.changeArea {
+  grid-area: changeArea;
 }
-.noseContainer {
-  grid-area: noseContainer;
+.face {
+  grid-area: face;
 }
-.smileContainer {
-  grid-area: smileContainer;
+.nose {
+  grid-area: nose;
 }
-.eyesContainer {
-  grid-area: eyesContainer;
+.smile {
+  grid-area: smile;
+}
+.eyes{
+  grid-area: eyes;
 }
 .canvas {
   grid-area: canvas;
