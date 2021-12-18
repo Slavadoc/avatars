@@ -67,30 +67,30 @@ ctx.stroke()
  }
  let aChangeArea = (name) => {
      if(name == 'eyes') {
-       let changeArea = document.getElementById('changeArea')
+       let changeArea = document.getElementById('change')
        let buttonEyes = document.getElementById('buttonEyes')
        const clone = buttonEyes.cloneNode(true);
        while (changeArea.firstChild)changeArea.firstChild.remove();
        changeArea.replaceWith(clone);
      }
      if(name == 'smile') {
-       let changeArea = document.getElementById('changeArea')
+       let changeArea = document.getElementById('change')
        let buttonSmile = document.getElementById('buttonSmile')
        const clone = buttonSmile.cloneNode(true);
        while (changeArea.firstChild) changeArea.firstChild.remove();
        changeArea.replaceWith(clone);
      }
      if(name == 'nose') {
-       let changeArea = document.getElementById('changeArea')
+       let changeArea = document.getElementById('change')
        let buttonNose = document.getElementById('buttonNose')
-       const clone = buttonSmile.cloneNode(true);
+       const clone = buttonNose.cloneNode(true);
        while (changeArea.firstChild) changeArea.firstChild.remove();
        changeArea.replaceWith(clone);
      }
      if(name == 'face') {
-       let changeArea = document.getElementById('changeArea')
+       let changeArea = document.getElementById('change')
        let buttonFace = document.getElementById('buttonFace')
-       const clone = buttonSmile.cloneNode(true);
+       const clone = buttonFace.cloneNode(true);
        while (changeArea.firstChild) changeArea.firstChild.remove();
        changeArea.replaceWith(clone);
      }

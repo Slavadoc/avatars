@@ -18,16 +18,25 @@
        <button class="nose" onclick="aChangeArea('nose')">nose</button>
        <button class="smile" id="smile" onclick="aChangeArea('smile')">smile</button>
        <button class="eyes" id="eyes" onclick="aChangeArea('eyes')">eyes</button>
-       <div class="changeArea" id="changeArea">ChangeArea</div>
-     </div>
+       <div class="changeArea" id="changeArea">
+         <div class="change" id="change">
+           ChangeArea
+         </div>
+       </div>
+       </div>
      <div>
-         <img src="img/smile.svg" class="buttonTriangle" id="buttonSmile" onclick="aSmile()"></img>
-         <img src="img/nose.svg" class="buttonTriangle" id="buttonTriangle" onclick="aTriangle()"></img>
-         <img src="img/face.svg" class="buttonCircle" id="buttonFace" onClick="aCircle()"></img>
+         <img src="img/smile.svg" class="buttonSmile" id="buttonSmile" onclick="aSmile()"></img>
+         <img src="img/nose.svg" class="buttonNose" id="buttonNose" onclick="aTriangle()"></img>
          <img src="img/eyes.svg" class="buttonEyes" id="buttonEyes" onclick="aEyes()"/>
        </div>
      </div>
     <script src="index.js"></script>
+    <link rel="import" href="smile.html">
+    <script>
+      let doc= document.querySelector('link[rel="import"]').import;
+      console.log(doc);
+      console.log(buttonFace);
+    </script>
     </div>
   </body>
 </html>

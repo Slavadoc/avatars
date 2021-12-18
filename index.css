@@ -34,7 +34,7 @@ H1 {
   justify-self: center;
   align-self: center;
 }
-.buttonCircle {
+.buttonFace {
     grid-area: buttonCircle;
     width: 100px;
     height: 100px;
@@ -48,7 +48,14 @@ H1 {
   justify-self: center;
   align-self: center;
 }
-.buttonTriangle {
+.buttonNose {
+    grid-area: buttonTriangle;
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+    align-self: center;
+}
+.buttonSmile {
     grid-area: buttonTriangle;
     width: 100px;
     height: 100px;
