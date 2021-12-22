@@ -1,17 +1,15 @@
 
-let canvas = document.getElementById('graph');
-let ctx = canvas.getContext('2d')
-ctx.beginPath()
-ctx.moveTo(0, 0)
-ctx.lineTo(300, 0)
-ctx.lineTo(300, 300)
-ctx.lineTo(0, 300)
-ctx.lineTo(0, 0)
-ctx.closePath()
-ctx.fillStyle = '#6949D7	'
-ctx.fill()
-ctx.stroke()
+// LocalStotage и попробуйпеременные туда писать.
+// и в консоль выводить их . например записывай все что рисовал пользователь.
+// именно в какой последовательности. пусть это пишется
+//  в массив. а мотом этот массив сохраняй в локальное хранилище. для начала
+//  так. и по нажатию на кнопку - просмотреть. выводи в консоль этот
+//  массив. для начала.
 
+myStorage = window.localStorage
+myStorage.setItem('eyes', '<img src="img/eyes.svg" class="buttonEyes" id="buttonEyes" onclick="aEyes()"/>')
+let cat = myStorage.getItem('eyes')
+console.log(cat)
  let aCircle = () => {
    // getCtc()
    let ct = canvas.getContext('2d')
@@ -68,7 +66,8 @@ ctx.stroke()
  let aChangeArea = (name) => {
      if(name == 'eyes') {
        let changeArea = document.getElementById('change')
-       let buttonEyes = document.getElementById('buttonEyes')
+       let buttonEyes = myStorage.getItem('face')
+       // let buttonEyes = document.getElementById('buttonEyes')
        const clone = buttonEyes.cloneNode(true);
        while (changeArea.firstChild)changeArea.firstChild.remove();
        changeArea.replaceWith(clone);

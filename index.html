@@ -32,10 +32,19 @@
      </div>
     <script src="index.js"></script>
     <link rel="import" href="smile.html">
-    <script>
-      let doc= document.querySelector('link[rel="import"]').import;
-      console.log(doc);
-      console.log(buttonFace);
+     <script>
+     let canvas = document.getElementById('graph');
+     let ctx = canvas.getContext('2d')
+     ctx.beginPath()
+     ctx.moveTo(0, 0)
+     ctx.lineTo(300, 0)
+     ctx.lineTo(300, 300)
+     ctx.lineTo(0, 300)
+     ctx.lineTo(0, 0)
+     ctx.closePath()
+     ctx.fillStyle = '#6949D7	'
+     ctx.fill()
+     ctx.stroke();
     </script>
     </div>
   </body>
